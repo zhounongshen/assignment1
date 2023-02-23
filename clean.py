@@ -9,6 +9,7 @@ def clean(contact_info_file,other_info_file):
     df.dropna(inplace=True)
     df.drop(df[df['job'].str.contains('insurance')].index, inplace=True)
     df.drop(df[df['job'].str.contains('Insurance')].index, inplace=True)
+    print('This is the shape of dataframe :', df.shape)
     return df
 
 
